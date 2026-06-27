@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   ExternalLink,
   CheckCircle,
@@ -161,7 +162,13 @@ export default function Portfolio() {
   };
 
   return (
-    <div id="portfolio-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Portfolio & Case Studies | CSY DIGITAL MARKETING</title>
+        <meta name="description" content="Browse CSY Digital Marketing's portfolio of success stories, case studies, and deliverables including websites, branding, marketing campaigns, videos, and graphics." />
+        <meta name="keywords" content="portfolio, case studies, success stories, digital marketing portfolio, web design portfolio" />
+      </Helmet>
+      <div id="portfolio-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
       {/* Aurora glow effects */}
       <div className="absolute top-[10%] left-[-15%] w-[60%] h-[60%] rounded-full blur-[120px] bg-blue-600/10 pointer-events-none" />
       <div className="absolute bottom-[10%] right-[-15%] w-[60%] h-[60%] rounded-full blur-[120px] bg-cyan-400/10 pointer-events-none" />
@@ -359,5 +366,6 @@ export default function Portfolio() {
         </div>
       </div>
     </div>
+    </>
   );
 }

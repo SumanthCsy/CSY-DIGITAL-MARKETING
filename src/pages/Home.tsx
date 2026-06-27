@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   Code,
   Search,
@@ -108,7 +109,13 @@ export default function Home({ setCurrentPage }: HomeProps) {
   ];
 
   return (
-    <div id="home-page" className="text-white relative overflow-hidden bg-[#0F172A]">
+    <>
+      <Helmet>
+        <title>CSY DIGITAL MARKETING | SEO, Web Design & Social Media Agency</title>
+        <meta name="description" content="CSY Digital Marketing helps businesses grow with SEO, Google Ads, social media marketing, website development, and brand identity design. Get your free growth audit today." />
+        <meta name="keywords" content="digital marketing, SEO, web design, paid ads, social media marketing, brand growth, CSY DIGITAL MARKETING" />
+      </Helmet>
+      <div id="home-page" className="text-white relative overflow-hidden bg-[#0F172A]">
       {/* CSS For Infinite Marquee Loop */}
       <style>{`
         @keyframes marquee {
@@ -531,5 +538,6 @@ export default function Home({ setCurrentPage }: HomeProps) {
         </div>
       </section>
     </div>
+    </>
   );
 }

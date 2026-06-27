@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="csyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#3B82F6"/>
+      <stop offset="50%" stopColor="#2563EB"/>
+      <stop offset="100%" stopColor="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="arrowGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2563EB"/>
+      <stop offset="100%" stopColor="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="88" fill="#FFFFFF"/>
+  <circle cx="100" cy="100" r="88" stroke="url(#csyGradient)" strokeWidth="3" fill="none"/>
+  <path d="M 45 75 Q 15 75 15 105 Q 15 135 45 135 Q 65 135 70 123" stroke="url(#csyGradient)" strokeWidth="18" strokeLinecap="round" fill="none"/>
+  <path d="M 95 80 Q 75 72 65 88 Q 55 102 75 110 Q 95 118 85 132 Q 75 142 55 135" stroke="url(#csyGradient)" strokeWidth="16" strokeLinecap="round" fill="none"/>
+  <path d="M 110 75 L 128 108 M 145 75 L 128 108 L 128 135" stroke="url(#csyGradient)" strokeWidth="17" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+  <rect x="135" y="142" width="8" height="15" rx="1.5" fill="#2563EB" opacity="0.6"/>
+  <rect x="147" y="132" width="8" height="25" rx="1.5" fill="#1D4ED8" opacity="0.8"/>
+  <rect x="159" y="120" width="8" height="37" rx="1.5" fill="url(#arrowGradient)"/>
+  <path d="M 25 140 C 55 142, 95 130, 148 70" stroke="url(#arrowGradient)" strokeWidth="10" strokeLinecap="round" fill="none"/>
+  <path d="M 132 64 L 156 64 L 156 88 L 148 80 Z" fill="url(#arrowGradient)" stroke="url(#arrowGradient)" strokeWidth="3" strokeLinejoin="round"/>
+</svg>

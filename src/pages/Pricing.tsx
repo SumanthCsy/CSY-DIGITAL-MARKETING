@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   Check,
   Zap,
@@ -50,7 +51,13 @@ export default function Pricing({ setCurrentPage, setSelectedService }: PricingP
   };
 
   return (
-    <div id="pricing-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Pricing & Packages | CSY DIGITAL MARKETING</title>
+        <meta name="description" content="Explore CSY Digital Marketing's transparent pricing packages and use our ROI calculator to estimate leads, conversions, and revenue for your business." />
+        <meta name="keywords" content="pricing, packages, digital marketing pricing, SEO pricing, ROI calculator" />
+      </Helmet>
+      <div id="pricing-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
       {/* Visual backdrops */}
       <div className="absolute top-[10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[15%] right-[-10%] w-[50%] h-[50%] bg-cyan-400/5 rounded-full blur-[120px] pointer-events-none" />
@@ -315,5 +322,6 @@ export default function Pricing({ setCurrentPage, setSelectedService }: PricingP
         </div>
       </div>
     </div>
+    </>
   );
 }

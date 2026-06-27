@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   Star,
   Quote,
@@ -42,7 +43,13 @@ export default function TestimonialsFAQ({ setCurrentPage }: TestimonialsFAQProps
   };
 
   return (
-    <div id="testimonials-faq-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Testimonials & FAQ | CSY DIGITAL MARKETING</title>
+        <meta name="description" content="Read testimonials from CSY Digital Marketing's clients and browse our FAQ to get answers about our services, pricing, and process." />
+        <meta name="keywords" content="testimonials, reviews, FAQ, frequently asked questions, digital marketing FAQ" />
+      </Helmet>
+      <div id="testimonials-faq-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
       {/* Visual background glows */}
       <div className="absolute top-[15%] right-[-10%] w-[50%] h-[50%] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[15%] left-[-10%] w-[50%] h-[50%] bg-cyan-400/5 rounded-full blur-[120px] pointer-events-none" />
@@ -254,5 +261,6 @@ export default function TestimonialsFAQ({ setCurrentPage }: TestimonialsFAQProps
         </div>
       </div>
     </div>
+    </>
   );
 }

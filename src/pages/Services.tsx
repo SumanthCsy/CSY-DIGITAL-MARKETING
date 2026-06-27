@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   Code,
   Search,
@@ -69,7 +70,13 @@ export default function Services({ setCurrentPage, setSelectedService }: Service
   };
 
   return (
-    <div id="services-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Our Services | CSY DIGITAL MARKETING - SEO, Web Design & More</title>
+        <meta name="description" content="Explore CSY Digital Marketing's premium services: web development, SEO, social media marketing, paid advertising, brand design, video content, and AI consulting." />
+        <meta name="keywords" content="digital marketing services, SEO services, web design, social media marketing, paid ads, brand design, video editing, AI consulting" />
+      </Helmet>
+      <div id="services-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
       {/* Decorative Blur Spheres */}
       <div className="absolute top-[20%] left-[-10%] w-[50%] h-[50%] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[20%] right-[-10%] w-[50%] h-[50%] bg-cyan-400/5 rounded-full blur-[120px] pointer-events-none" />
@@ -209,5 +216,6 @@ export default function Services({ setCurrentPage, setSelectedService }: Service
         </div>
       </div>
     </div>
+    </>
   );
 }

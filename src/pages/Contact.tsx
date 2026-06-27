@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   Mail,
   Phone,
@@ -112,7 +113,13 @@ export default function Contact({ selectedService = "", setSelectedService }: Co
   const whatsappLink = `https://wa.me/917702685262?text=Hi%20Sumanth,%20I'm%20interested%20in%20digital%20marketing%20services%20for%20my%20business.`;
 
   return (
-    <div id="contact-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden font-sans">
+    <>
+      <Helmet>
+        <title>Contact Us | CSY DIGITAL MARKETING</title>
+        <meta name="description" content="Get in touch with CSY Digital Marketing for a free strategy audit. Contact us via email, phone, or WhatsApp to discuss your digital marketing needs." />
+        <meta name="keywords" content="contact, get in touch, free audit, digital marketing contact, CSY contact" />
+      </Helmet>
+      <div id="contact-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden font-sans">
       {/* Decorative Blur Backdrops */}
       <div className="absolute top-[10%] left-[-15%] w-[60%] h-[60%] rounded-full blur-[120px] bg-blue-600/5 pointer-events-none" />
       <div className="absolute bottom-[10%] right-[-15%] w-[60%] h-[60%] rounded-full blur-[120px] bg-cyan-400/5 pointer-events-none" />
@@ -407,5 +414,6 @@ export default function Contact({ selectedService = "", setSelectedService }: Co
         </div>
       </div>
     </div>
+    </>
   );
 }

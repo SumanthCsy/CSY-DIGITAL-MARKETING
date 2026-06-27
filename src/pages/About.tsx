@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   Compass,
   Eye,
@@ -47,7 +48,13 @@ export default function About() {
   ];
 
   return (
-    <div id="about-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>About CSY DIGITAL MARKETING | Sumanth Csy's Vision & Story</title>
+        <meta name="description" content="Learn about CSY Digital Marketing, founded by Sumanth Csy. Discover our mission, vision, and 8-step process for building brands that dominate search and drive real business growth." />
+        <meta name="keywords" content="about CSY Digital Marketing, Sumanth Csy, digital marketing agency, brand growth, vision, mission" />
+      </Helmet>
+      <div id="about-page" className="text-white min-h-screen pt-28 pb-20 bg-[#0F172A] relative overflow-hidden">
       {/* Aurora glow effects */}
       <div className="absolute top-[10%] left-[-15%] w-[60%] h-[60%] rounded-full blur-[120px] bg-blue-600/10 pointer-events-none" />
       <div className="absolute bottom-[10%] right-[-15%] w-[60%] h-[60%] rounded-full blur-[120px] bg-cyan-400/10 pointer-events-none" />
@@ -274,5 +281,6 @@ export default function About() {
         </div>
       </div>
     </div>
+    </>
   );
 }
