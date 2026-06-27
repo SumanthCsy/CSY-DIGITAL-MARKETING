@@ -16,6 +16,7 @@ import {
   UserCheck
 } from "lucide-react";
 import { PROCESS_STEPS } from "../data";
+import adminSvg from "../images/admin.svg";
 
 export default function About() {
   const [activeStep, setActiveStep] = useState<number>(1);
@@ -128,9 +129,9 @@ export default function About() {
 
                 <div className="relative z-10">
                   {/* Founder Image Headshot Placeholder */}
-                  <div className="aspect-square w-full rounded-2xl bg-[#090F19] overflow-hidden border border-white/10 mb-6">
+                  <div className="aspect-square w-1/2 mx-auto rounded-2xl bg-[#090F19] overflow-hidden border border-white/10 mb-6">
                     <img
-                      src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80"
+                      src={adminSvg}
                       alt="Sumanth Csy - Founder of CSY Digital Marketing"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     />
